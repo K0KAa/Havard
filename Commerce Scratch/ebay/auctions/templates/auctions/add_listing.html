@@ -1,0 +1,9 @@
+{%extends "auctions/layout.html"%} {%load crispy_forms_tags%} {%block body%}
+
+<form method="POST">
+    {%csrf_token%} {{form | crispy}}
+    <br>
+    <button type="submit" style="padding:0.3rem 1rem 0.3rem 1rem;">Submit</button>
+</form>
+
+{%endblock%}

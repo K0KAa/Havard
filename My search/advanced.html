@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Google Search</title>
+</head>
+
+<body>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="index.html" style="width: 10rem">Back to Search</a>
+        </li>
+    </ul>
+
+    <div class="search-box">
+        <h1 class="title">Advanced Search</h1>
+        <form action="https://google.com/search" class="form">
+            <label for="b1">All of these words::</label>
+            <input type="text" id="b1" name="as_q" class="input-box" />
+            <label for="b2">Exact word or phrase::</label>
+            <input type="text" id="b2" name="as__epq" class="input-box" />
+            <label for="b3">Any of these words::</label>
+            <input type="text" id="b3" name="as_oq" class="input-box" />
+            <label for="b4">Exact word/phrase::</label>
+            <input type="text" id="b4" name="as_epq" class="input-box" />
+            <label for="b5">None these words::</label>
+            <input type="text" id="b5" name="as_eq" class="input-box" />
+
+            <div class="buttons">
+                <button type="submit" name="btnI" class="search-btn" style="background: grey; border-radius: 5px">
+            Google Search
+          </button>
+            </div>
+        </form>
+    </div>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+    </style>
+</body>
+
+</html>

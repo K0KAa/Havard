@@ -1,0 +1,28 @@
+{%extends "auctions/layout.html"%} {%block body%}
+<div class="add-product">
+    <a class="product" href="{% url 'addListing'%}">Add Your Product</a>
+</div>
+<div class="single-card">
+    {%for listing in listings%}
+
+    <div class="card" style="width: 18rem;">
+        {% if listing.image_url%}
+        <img class="card-img-top" style="width:300px; height: 400px;" src="{{listing.image_url}}" alt="Card image cap"> {%endif%}
+        <div class="card-body">
+            <h5 class="card-title"> {{listing.title}}</h5>
+            <p class="card-text">{{listing.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="font-weight: 600;">Starting Bid: {{listing.start_bid}}</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+
+        </ul>
+        <div class="card-body">
+            <a href="{% url 'detail' listing.id%}" class="detail-link">Detail</a>
+        </div>
+    </div>
+    {%endfor%}
+
+</div>
+
+{%endblock%}

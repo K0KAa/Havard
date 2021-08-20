@@ -1,0 +1,36 @@
+{%extends "auctions/layout.html"%} {%block body%}
+
+
+
+
+<div class="detail-card">
+    <div class="image">
+        <img src={{listing.image_url}} style="width:300px; height: 400px;" alt="">
+    </div>
+    <div class="card-layout">
+        <h3 class="detail-title">{{listing.title}}</h3>
+
+        <p class="description">
+            {{listing.description}}
+        </p>
+        <b class="date">{{listing.date_created}}</b>
+        <br>
+        <i class="bid">Bid - $ {{listing.start_bid}} </i>
+        <form action="" method="POST" style="margin-left:1.6rem; ">
+            {%csrf_token%}
+            <input type="number" name="bid" style="margin-top: 5px;" class="input" value="{{listing.start_bid}}" placeholder="Bid here..">
+            <input type="submit" class="btn btn-success" style="height: 2rem">Place bid</Input>
+        </form>
+
+    </div>
+</div>
+
+<form action="" method="POST" class="comment">
+    {%csrf_token%}
+    <input type="text" name="comment" class="input" placeholder="comment here..">
+    <input type="submit" class="product comment-btn" value="submit">
+</form>
+
+
+
+{%endblock%}
